@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "An API used Node.js with MongoDB database.\r I'm a huge fan of Jay Chou, this application is a website for both downloading and online playing music as well as MV.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guojutaoo/api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guojutaoo/api/issues"
+  },
+  "homepage": "https://github.com/guojutaoo/api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9",
+    "underscore": "^1.9.1"
+  }
+}
