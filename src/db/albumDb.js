@@ -12,14 +12,20 @@ const Album = mongoose.model(
     rating:{
         type: Number,
         required: false,
-        minlength: 1,
-        maxlength: 2
+        min: 0,
+        max: 10
     },
     year:{
         type: Number,
         required: false,
-        minlength: 1,
-        maxlength: 4
+        min: 0,
+        max: 2500
+    },
+    albumId:{
+        type: Number,
+        required: true,
+        unique: true,
+        min: 0
     }
   })
 );
