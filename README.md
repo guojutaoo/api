@@ -4,13 +4,13 @@ An Reacj.js single page application with Node.js server and MongoDB database, th
 apparently, it's much eaiser than GoLang.
 
 
-<h3>To run the client</h3>
-```
+#<h3>To run the client</h3>
+```bash
 npm install
 npm start
 ```
 
-<h3>To run the server</h3>
+#<h3>To run the server</h3>
 ```
 nodemon index.js
 ```
