@@ -1,0 +1,56 @@
+.intro{
+    /* background-color: red; */
+    height: 500px;
+    display: flex;
+    margin-top: 170px;
+}
+
+img{
+    height: 400px;
+    width: 350px;
+    margin-left: 400px;
+
+}
+
+.text{
+}
+
+p{
+    color: #fff;
+    padding: 40px;
+    margin-left:15px;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: left;
+}
+
+.download{
+    position: absolute;
+    margin-left: 20%;
+    height: 50px;
+    width:60%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    text-align: left;
+}
+
+.download-link{
+    position: relative;
+    padding: 0;
+    margin-top: 5px;
+}
+
+#btn-download{
+    position: relative;
+    margin-top: -97px;
+    margin-left: 150px;
+    margin-right: -130px;
+}
+
+#btn-return{
+    position: relative;
+    margin-left: 70%;
+    margin-top: 100px;
+}

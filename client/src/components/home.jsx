@@ -45,7 +45,7 @@ class Home extends Component {
         )}
         {music.length===0&&musics.length !== 0 && <MusicList musics={musics} singleMusic={this.singleMusic}/>}
         {music.length!==0&&<SingeMusic music={music} returnMusicList={this.returnMusicList}/>}
-        {musics.length !== 0 && (
+        {music.length===0&&musics.length !== 0 && (
           <button
             className="btn btn-success"
             id="form-button"
