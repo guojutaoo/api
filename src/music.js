@@ -3,7 +3,7 @@ const {Music} = require("./db/musicDb")
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-    const musics = await Music.find().sort("albumId");
+    const musics = await Music.find().sort("musicId");
     console.log(musics);
     res.send(musics);
   });

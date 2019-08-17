@@ -5,14 +5,15 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   const albums = await Album.find().sort("year");
   console.log(albums);
-  res.send(albums);
+  res.json(albums);
 });
 
 router.post("/", async (req, res) => {
   let album = new Album({
     title: req.body.title,
     rating: req.body.rating,
-    year: req.body.year
+    year: req.body.year,
+    albumId: req.body.albumId
   });
   album = await album.save();
   res.send(album);
@@ -24,7 +25,8 @@ router.put("/:id", async (req, res) => {
     {
       title: req.body.title,
       rating: req.body.rating,
-      year: req.body.year
+      year: req.body.year,
+      albumId: req.body.albumId
     },
     { new: true }
   );
@@ -33,7 +35,7 @@ router.put("/:id", async (req, res) => {
       .status(404)
       .send("The album with the given ID was not found.");
 
-  res.send(customer);
+  res.send(album);
 });
 
 router.delete("/:id", async (req, res) => {
