@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import AlbumList from "./albumList";
 import MusicList from "./musicList";
-import SingeMusic from './singleMusic';
+import SingeMusic from "./singleMusic";
 import axios from "axios";
 import "../css/home.css";
 
 class Home extends Component {
-  state = { album: [], musics: [], music:[] };
+  state = { album: [], musics: [], music: [] };
   async componentDidMount() {
     axios.get("http://localhost:8080/album").then(res => {
       this.setState({ album: res.data });
@@ -20,18 +20,18 @@ class Home extends Component {
     });
   };
 
-  singleMusic = (musicId) =>{
-    const data = this.state.musics.filter(music=>musicId===music._id);
-    this.setState({music: data});
-  }
+  singleMusic = musicId => {
+    const data = this.state.musics.filter(music => musicId === music._id);
+    this.setState({ music: data });
+  };
 
   goHomepage = () => {
     this.setState({ musics: [] });
   };
 
-  returnMusicList=()=>{
-    this.setState({ music: []});
-  }
+  returnMusicList = () => {
+    this.setState({ music: [] });
+  };
 
   render() {
     const album = this.state.album;
@@ -40,12 +40,17 @@ class Home extends Component {
     console.log(musics);
     return (
       <React.Fragment>
-        {music.length===0&&(musics.length === 0 && (
-          <AlbumList album={album} onGetMusic={this.getMusic} />)
+        {music.length === 0 &&
+          (musics.length === 0 && (
+            <AlbumList album={album} onGetMusic={this.getMusic} />
+          ))}
+        {music.length === 0 && musics.length !== 0 && (
+          <MusicList musics={musics} singleMusic={this.singleMusic} />
         )}
-        {music.length===0&&musics.length !== 0 && <MusicList musics={musics} singleMusic={this.singleMusic}/>}
-        {music.length!==0&&<SingeMusic music={music} returnMusicList={this.returnMusicList}/>}
-        {music.length===0&&musics.length !== 0 && (
+        {music.length !== 0 && (
+          <SingeMusic music={music} returnMusicList={this.returnMusicList} />
+        )}
+        {music.length === 0 && musics.length !== 0 && (
           <button
             className="btn btn-success"
             id="form-button"

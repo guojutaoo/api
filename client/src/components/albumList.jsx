@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 const AlbumList = props => {
-    const {album, onGetMusic} = props;
+  const { album, onGetMusic } = props;
   return (
     <React.Fragment>
       <h1>Album </h1>
@@ -17,10 +17,7 @@ const AlbumList = props => {
           {album &&
             Object.values(album).map(data => (
               <tr key={data._id}>
-                <td
-                  className="body"
-                  onClick={() => onGetMusic(data.albumId)}
-                >
+                <td className="body" onClick={() => onGetMusic(data.albumId)}>
                   {data.title}
                 </td>
                 <td>{data.year}</td>
