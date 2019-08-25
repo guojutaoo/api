@@ -1,7 +1,6 @@
 <h1>API</h1>
 
-An Reacj.js single page application with Node.js server and MongoDB database, this web app is mainly to try something new(Node.js),
-apparently, it's much eaiser than GoLang.
+An React.js single page application with Node.js server and MongoDB database, this web app is mainly to try Node.js.
 
 
 ## To run the client
