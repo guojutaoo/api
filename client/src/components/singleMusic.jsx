@@ -1,5 +1,8 @@
 import React from "react";
+// import ReactAudioPlayer from "react-audio-player";
 import "../css/singleMusic.css";
+import AudioPlayer from "react-h5-audio-player";
+import musicfile from "../music/周杰伦 - 七里香.mp3";
 
 const SingeMusic = props => {
   const { music, returnMusicList } = props;
@@ -19,16 +22,19 @@ const SingeMusic = props => {
     require("../img/哎呦，不错哦.jpg"),
     require("../img/周杰伦的床边故事.jpg")
   ];
-  const image = images[music[0].albumId];
+  const image = images[music[0].albumId - 1];
 
   return (
     <React.Fragment>
       <div className="intro">
-        <img src={image} alt=""/>
+        <img src={image} alt="" />
         <div className="text">
           <p>Album: {music[0].title}</p>
           <p>ID: {music[0].albumId}</p>
           <p>Liricist: {music[0].lyricist}</p>
+          <div className="audioplayer">
+            <AudioPlayer src={musicfile} onPlay={e => console.log("onPlay")} />
+          </div>
         </div>
       </div>
       <div className="download">
@@ -39,6 +45,7 @@ const SingeMusic = props => {
         <button className="btn btn-primary" id="btn-download">
           Deluxe
         </button>
+        {/* <ReactAudioPlayer src="" autoPlay controls /> */}
       </div>
       <button
         className="btn btn-success"

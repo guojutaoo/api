@@ -5,9 +5,10 @@ const music = require("./src/music");
 const app = express();
 
 mongoose
-  .connect("mongodb://localhost/music")
+  .connect("mongodb://localhost/music", {useNewUrlParser: true })
   .then(() => console.log("Connecting to the database..."))
   .catch(err => console.log(err));
+  mongoose.set('useCreateIndex', true)
 
   app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
