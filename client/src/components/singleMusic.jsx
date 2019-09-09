@@ -1,11 +1,10 @@
 import React from "react";
-// import ReactAudioPlayer from "react-audio-player";
 import "../css/singleMusic.css";
 import AudioPlayer from "react-h5-audio-player";
-import musicfile from "../music/周杰伦 - 七里香.mp3";
+import musicfile from "../music/周杰伦 - 七里香.mp3"; 
 
 const SingeMusic = props => {
-  const { music, returnMusicList } = props;
+  const { music, returnMusicList, renderVideo } = props;
   const images = [
     require("../img/Jay.jpg"),
     require("../img/范特西.jpg"),
@@ -23,13 +22,11 @@ const SingeMusic = props => {
     require("../img/周杰伦的床边故事.jpg")
   ];
   const image = images[music[0].albumId - 1];
-  const image = images[music[0].albumId];
 
   return (
     <React.Fragment>
       <div className="intro">
         <img src={image} alt="" />
-        <img src={image} alt=""/>
         <div className="text">
           <p>Album: {music[0].title}</p>
           <p>ID: {music[0].albumId}</p>
@@ -40,8 +37,8 @@ const SingeMusic = props => {
         </div>
       </div>
       <div className="download">
-        <p className="download-link">Download: </p>
-        <button className="btn btn-primary" id="btn-download">
+        <p className="download-link">Video: </p>
+        <button className="btn btn-primary" id="btn-download" onClick={renderVideo}>
           Common
         </button>{" "}
         <button className="btn btn-primary" id="btn-download">
