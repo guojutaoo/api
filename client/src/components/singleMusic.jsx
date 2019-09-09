@@ -23,11 +23,13 @@ const SingeMusic = props => {
     require("../img/周杰伦的床边故事.jpg")
   ];
   const image = images[music[0].albumId - 1];
+  const image = images[music[0].albumId];
 
   return (
     <React.Fragment>
       <div className="intro">
         <img src={image} alt="" />
+        <img src={image} alt=""/>
         <div className="text">
           <p>Album: {music[0].title}</p>
           <p>ID: {music[0].albumId}</p>
