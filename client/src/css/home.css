@@ -1,7 +1,10 @@
 .App, html, #root, body{
     padding: 0;
-    margin: 0;
-    background-color: #34495e;
+    margin: 0 auto;
+    background-image: url(../img/milky.jpeg);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 h1{
@@ -9,18 +12,21 @@ h1{
     padding: 100px;
 }
 
+.table {
+    /* background-color: #fff; */
+}
+
 #album-table{
-    background-image: linear-gradient(#e74c3c, #09791a, #00d4ff);
     height: 100px;
     text-align: center;
-    margin-left: 10%;
     margin-bottom: 100px;
     color: #fff;
-    width: 1500px;
+    width: 1400px;
+    margin-left: 8%;
 }
 
 thead .title{
-    color: black;
+    color: greenyellow;
     font-size: 20px;
 }
 
@@ -29,7 +35,7 @@ tbody .body{
     transition: 0.5s;
 }
 tbody .body:hover{
-    color: rgba(0, 0, 0, 0.8);
+    color: #3498db;
 }
 
 #form-button {

@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/singleMusic.css";
 import AudioPlayer from "react-h5-audio-player";
-import musicfile from "../music/周杰伦 - 七里香.mp3"; 
+import musicfile from "../music/周杰伦 - 七里香.mp3";
+import { AwesomeButton } from "react-awesome-button";
+import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 const SingeMusic = props => {
   const { music, returnMusicList, renderVideo } = props;
@@ -38,12 +40,16 @@ const SingeMusic = props => {
       </div>
       <div className="download">
         <p className="download-link">Video: </p>
-        <button className="btn btn-primary" id="btn-download" onClick={renderVideo}>
+        <AwesomeButton
+          cssModule={AwesomeButtonStyles}
+          type="secondary"
+          onPress={renderVideo}
+        >
           Common
-        </button>{" "}
-        <button className="btn btn-primary" id="btn-download">
+        </AwesomeButton>{" "}
+        <AwesomeButton cssModule={AwesomeButtonStyles} type="primary">
           Deluxe
-        </button>
+        </AwesomeButton>
         {/* <ReactAudioPlayer src="" autoPlay controls /> */}
       </div>
       <button

@@ -2,7 +2,8 @@
     padding-top: 30px;
     padding-bottom: 10px;
     color: #ffff;
-    margin-left: -1000px;
+    /* margin-left: -1000px; */
+    text-align: center;
 }
 .video-player{
     width: 1100px;
@@ -11,7 +12,7 @@
     padding-top: 100px;
 }
 
-#video-btn{
+.video-btn{
     margin-right: -1200px;
-    margin-top: -300px;
+    margin-top: -185px;
 }
